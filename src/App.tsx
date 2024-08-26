@@ -1,7 +1,20 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, createMuiTheme, ThemeProvider, CssBaseline, IconButton } from '@material-ui/core';
-import DeleteIcon from '@material-ui/icons/Delete';  // import the delete icon
+import {
+    Button,
+    Table,
+    TableBody,
+    TableCell,
+    TableContainer,
+    TableHead,
+    TableRow,
+    Paper,
+    createTheme,
+    ThemeProvider,
+    CssBaseline,
+    IconButton,
+} from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';  // Updated import for DeleteIcon
 
 interface Product {
     id: number;
@@ -25,9 +38,9 @@ const App: React.FC = () => {
         fetchProducts();
     };
 
-    const theme = createMuiTheme({
+    const theme = createTheme({
         palette: {
-            type: 'light',
+            mode: 'light',
             primary: {
                 main: '#1976d2',
             },
